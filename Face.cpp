@@ -3,7 +3,7 @@
 #include "Face.h"
 
 namespace mmm{
-    Edge Facee::against(int v) const {
+    Edge Face::against(int v) const {
         assert(v == v1 || v == v2 || v == v3);
         if(v == v1){
             return Edge(v2,v3);
@@ -17,7 +17,7 @@ namespace mmm{
     }
 
     void Face::reverse() {
-        std::swapp(v1,v2);
+        std::swap(v1,v2);
     }
 
     void Face::replace(int v, int vNew) {
