@@ -41,7 +41,7 @@ namespace mmm{
     Vector operator + (const Vector &a, const Vector &b);
     Vector operator - (const Vector &a, const Vector &b);
     Vector operator * (const Vector &a, const Vector &b);
-    Vector operator / (const Vector &a, const Vector &b);
+    Vector operator / (const Vector &a, const double &b);
 
     double norm(const Vector &v);
     Vector crossProduct(const Vector &a, const Vector &b);

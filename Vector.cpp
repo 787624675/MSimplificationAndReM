@@ -1,5 +1,6 @@
 #include "Vector.h"
 #include <cassert>
+#include <math.h>
 
 namespace mmm{
     Vector operator + (const Vector &a, const Vector &b){
@@ -25,11 +26,11 @@ namespace mmm{
         }
         return c;
     }
-    Vector operator / (const Vector a, const double &b){
+    Vector operator / (const Vector &a, const double &b){
         assert(b != 0);
         Vector c(a.size());
         for(int i = 0; i < a.size();i++){
-            a[i] = a[i] / b;
+            c[i] = a[i] / b;
         }
         return c;
     }
@@ -51,9 +52,9 @@ namespace mmm{
     double innerProduct(const Vector &a, const Vector &b){
         assert(a.size() == b.size());
         double c = 0;
-        for(int i = 0; i < a.size();i++{
+        for(int i = 0; i < a.size();i++){
             c += a[i] * b[i];
-        })
+        }
         return c;
     }
 }
